@@ -1,0 +1,16 @@
+name: 'dataops_project'
+version: '1.0'
+config-version: 2
+
+profile: 'default'
+
+model-paths: ['dbt/models']
+target-path: 'target'
+clean-targets: ['target', 'dbt_modules']
+
+models:
+  dataops_project:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

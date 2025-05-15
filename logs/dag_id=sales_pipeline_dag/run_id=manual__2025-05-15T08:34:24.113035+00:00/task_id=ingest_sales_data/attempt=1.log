@@ -1,0 +1,28 @@
+[2025-05-15T08:34:24.993+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: sales_pipeline_dag.ingest_sales_data manual__2025-05-15T08:34:24.113035+00:00 [queued]>
+[2025-05-15T08:34:25.055+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: sales_pipeline_dag.ingest_sales_data manual__2025-05-15T08:34:24.113035+00:00 [queued]>
+[2025-05-15T08:34:25.055+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2025-05-15T08:34:25.056+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2025-05-15T08:34:25.056+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2025-05-15T08:34:25.173+0000] {taskinstance.py:1304} INFO - Executing <Task(BashOperator): ingest_sales_data> on 2025-05-15 08:34:24.113035+00:00
+[2025-05-15T08:34:25.195+0000] {standard_task_runner.py:55} INFO - Started process 197 to run task
+[2025-05-15T08:34:25.200+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'sales_pipeline_dag', 'ingest_sales_data', 'manual__2025-05-15T08:34:24.113035+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/dag_pipeline.py', '--cfg-path', '/tmp/tmpuv8gll29']
+[2025-05-15T08:34:25.205+0000] {standard_task_runner.py:83} INFO - Job 3: Subtask ingest_sales_data
+[2025-05-15T08:34:25.401+0000] {task_command.py:389} INFO - Running <TaskInstance: sales_pipeline_dag.ingest_sales_data manual__2025-05-15T08:34:24.113035+00:00 [running]> on host 0ae4d98d4859
+[2025-05-15T08:34:25.528+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=epsi_data_team
+AIRFLOW_CTX_DAG_ID=sales_pipeline_dag
+AIRFLOW_CTX_TASK_ID=ingest_sales_data
+AIRFLOW_CTX_EXECUTION_DATE=2025-05-15T08:34:24.113035+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-05-15T08:34:24.113035+00:00
+[2025-05-15T08:34:25.532+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2025-05-15T08:34:25.536+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo "Ingestion simulée : fichier sales.csv déjà disponible dans /data."']
+[2025-05-15T08:34:25.588+0000] {subprocess.py:86} INFO - Output:
+[2025-05-15T08:34:25.598+0000] {subprocess.py:93} INFO - Ingestion simulée : fichier sales.csv déjà disponible dans /data.
+[2025-05-15T08:34:25.598+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-05-15T08:34:25.648+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=sales_pipeline_dag, task_id=ingest_sales_data, execution_date=20250515T083424, start_date=20250515T083424, end_date=20250515T083425
+[2025-05-15T08:34:25.700+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2025-05-15T08:34:25.738+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

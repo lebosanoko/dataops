@@ -1,0 +1,34 @@
+[2025-05-15T08:34:26.758+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: sales_pipeline_dag.run_dbt_models scheduled__2025-05-14T00:00:00+00:00 [queued]>
+[2025-05-15T08:34:26.769+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: sales_pipeline_dag.run_dbt_models scheduled__2025-05-14T00:00:00+00:00 [queued]>
+[2025-05-15T08:34:26.769+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2025-05-15T08:34:26.769+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2025-05-15T08:34:26.770+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2025-05-15T08:34:26.786+0000] {taskinstance.py:1304} INFO - Executing <Task(BashOperator): run_dbt_models> on 2025-05-14 00:00:00+00:00
+[2025-05-15T08:34:26.793+0000] {standard_task_runner.py:55} INFO - Started process 203 to run task
+[2025-05-15T08:34:26.797+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'sales_pipeline_dag', 'run_dbt_models', 'scheduled__2025-05-14T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/dag_pipeline.py', '--cfg-path', '/tmp/tmpkuzxn8j5']
+[2025-05-15T08:34:26.799+0000] {standard_task_runner.py:83} INFO - Job 6: Subtask run_dbt_models
+[2025-05-15T08:34:26.874+0000] {task_command.py:389} INFO - Running <TaskInstance: sales_pipeline_dag.run_dbt_models scheduled__2025-05-14T00:00:00+00:00 [running]> on host 0ae4d98d4859
+[2025-05-15T08:34:26.964+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=epsi_data_team
+AIRFLOW_CTX_DAG_ID=sales_pipeline_dag
+AIRFLOW_CTX_TASK_ID=run_dbt_models
+AIRFLOW_CTX_EXECUTION_DATE=2025-05-14T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-05-14T00:00:00+00:00
+[2025-05-15T08:34:26.965+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2025-05-15T08:34:26.966+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /workspace/dbt && dbt run']
+[2025-05-15T08:34:26.977+0000] {subprocess.py:86} INFO - Output:
+[2025-05-15T08:34:26.978+0000] {subprocess.py:93} INFO - /bin/bash: line 1: cd: /workspace/dbt: No such file or directory
+[2025-05-15T08:34:26.979+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-05-15T08:34:26.992+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-05-15T08:34:26.996+0000] {taskinstance.py:1327} INFO - Marking task as UP_FOR_RETRY. dag_id=sales_pipeline_dag, task_id=run_dbt_models, execution_date=20250514T000000, start_date=20250515T083426, end_date=20250515T083426
+[2025-05-15T08:34:27.021+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 6 for task run_dbt_models (Bash command failed. The command returned a non-zero exit code 1.; 203)
+[2025-05-15T08:34:27.051+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2025-05-15T08:34:27.106+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

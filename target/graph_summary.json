@@ -1,0 +1,1 @@
+{"_invocation_id": "1bf61d86-7aba-4fff-ad80-142dbec9330f", "linked": {"0": {"name": "model.dataops_project.stg_sales", "type": "model", "succ": [1]}, "1": {"name": "model.dataops_project.fct_daily_revenue", "type": "model"}}}
